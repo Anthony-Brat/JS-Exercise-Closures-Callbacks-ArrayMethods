@@ -238,8 +238,13 @@ function removeApple(strings){
  * 
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
-function stringSmash(/* code here */) {
-  /* code here */
+function stringSmash(strings) {
+  const result = strings.reduce (function(fruit){
+
+  })
+  return result;
+
+
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -257,8 +262,13 @@ function stringSmash(/* code here */) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  let result = [];
+  runners.forEach(function(names){
+    return result.push(`${names.last_name}, ${names.first_name}`);
+  });
+  console.log(result);
+
 }
 
 /**
@@ -273,8 +283,11 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  const result = runners.map (function(name){
+    return name.first_name.toUpperCase();
+  })
+  return result;
 }
 
 /**
@@ -320,9 +333,9 @@ function tallyUpDonations(/* CODE HERE */) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *  counter 1 is a closure
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ *   counter 1 because there is an inner and outer function.
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
  *
 */
